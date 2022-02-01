@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MisProject.Helpers.Tests", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MisProject.DTOs", "Layers\MisProject.DTOs\MisProject.DTOs.csproj", "{64AEC6CD-4E7E-4998-8835-3A7D2E1F42B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MisProject.DataHelpers", "Libraries\MisProject.DataHelpers\MisProject.DataHelpers.csproj", "{6E4E0955-EEA7-4CA9-8E58-DF23293933AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{64AEC6CD-4E7E-4998-8835-3A7D2E1F42B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64AEC6CD-4E7E-4998-8835-3A7D2E1F42B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64AEC6CD-4E7E-4998-8835-3A7D2E1F42B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E4E0955-EEA7-4CA9-8E58-DF23293933AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E4E0955-EEA7-4CA9-8E58-DF23293933AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E4E0955-EEA7-4CA9-8E58-DF23293933AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E4E0955-EEA7-4CA9-8E58-DF23293933AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +74,7 @@ Global
 		{86D8E05A-2D73-44B4-8FD6-CFB59ACE80F5} = {4DE7753B-14BA-45EF-8BF9-07D69F4C2C1E}
 		{71764F6E-1150-45A8-8469-050BA4F609AC} = {6BE521ED-EB4A-4EC5-BBD8-8CB0C73F3EEB}
 		{64AEC6CD-4E7E-4998-8835-3A7D2E1F42B2} = {FE88F9AD-9340-4C9F-ACFA-65A8F9BB45B2}
+		{6E4E0955-EEA7-4CA9-8E58-DF23293933AF} = {4DE7753B-14BA-45EF-8BF9-07D69F4C2C1E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79D5A344-B05F-49E9-9A9D-AA5C95DBC7B0}

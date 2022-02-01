@@ -17,6 +17,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\..\Libraries\MisProject.DataHelpers\MisProject.DataHelpers.csproj" />
 	  <ProjectReference Include="..\MisProject.DTOs\MisProject.DTOs.csproj" />
 	</ItemGroup>
 
