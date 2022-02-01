@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MisProject.DataLayer.Contexts;
 
@@ -10,9 +11,10 @@ using MisProject.DataLayer.Contexts;
 namespace MisProject.DataLayer.Migrations
 {
     [DbContext(typeof(MisDbContext))]
-    partial class MisDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220201102131_Add_RoleSeedData")]
+    partial class Add_RoleSeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -124,74 +126,6 @@ namespace MisProject.DataLayer.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("RolePermissions");
-
-                    b.HasData(
-                        new
-                        {
-                            RolePermissionId = 1,
-                            PermissionId = 1,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            RolePermissionId = 2,
-                            PermissionId = 2,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            RolePermissionId = 3,
-                            PermissionId = 3,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            RolePermissionId = 4,
-                            PermissionId = 4,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            RolePermissionId = 5,
-                            PermissionId = 5,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            RolePermissionId = 6,
-                            PermissionId = 6,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            RolePermissionId = 7,
-                            PermissionId = 7,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            RolePermissionId = 8,
-                            PermissionId = 8,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            RolePermissionId = 9,
-                            PermissionId = 9,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            RolePermissionId = 10,
-                            PermissionId = 10,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            RolePermissionId = 11,
-                            PermissionId = 11,
-                            RoleId = 1
-                        });
                 });
 
             modelBuilder.Entity("MisProject.DTOs.Entities.Users.Role", b =>

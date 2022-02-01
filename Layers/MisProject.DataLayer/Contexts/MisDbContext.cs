@@ -19,6 +19,8 @@ public class MisDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ConfigPermissionSection();
+        modelBuilder.ConfigUsersSection();
+
         base.OnModelCreating(modelBuilder);
     }
 }
