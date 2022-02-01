@@ -26,6 +26,9 @@ public static class UserSectionConfigs
             IsEmailConfirmed = true,
             IsPhoneNumberConfirmed = true,
             IsDeleted = false,
+            ActiveCode = "4774d6cf92a744f9b181609003b31e7d",
+            IdentityCode = "045f5b119de54909ab6630eae9a0b532",
+            RegisterTime = new DateTime(2022, 2, 1, 17, 1, 10, 967, DateTimeKind.Local).AddTicks(1720),
         },
         new User()
         {
@@ -39,6 +42,9 @@ public static class UserSectionConfigs
             IsEmailConfirmed = true,
             IsPhoneNumberConfirmed = true,
             IsDeleted = false,
+            ActiveCode = "384528b9580f4acfbcc90f2f25ce08b7",
+            IdentityCode = "0dcb7d233a064c5580269c07a15bfaf3",
+            RegisterTime = new DateTime(2022, 2, 1, 17, 1, 10, 974, DateTimeKind.Local).AddTicks(8386),
         },
         new User()
         {
@@ -52,7 +58,17 @@ public static class UserSectionConfigs
             IsEmailConfirmed = true,
             IsPhoneNumberConfirmed = true,
             IsDeleted = false,
+            ActiveCode = "1191b1fe89924cc2b6e47af84b1eb0a0",
+            IdentityCode = "7cf1a61f722941b289e2c6a31983dcd3",
+            RegisterTime = new DateTime(2022, 2, 1, 17, 1, 10, 974, DateTimeKind.Local).AddTicks(8753),
         }
+    };
+
+    public static readonly List<UserRole> UserRoleSeedList = new()
+    {
+        new UserRole(1, 1) { UserRoleId = 1 },
+        new UserRole(2, 2) { UserRoleId = 2 },
+        new UserRole(3, 2) { UserRoleId = 3 },
     };
 
     public static void ConfigUsersSection(this ModelBuilder modelBuilder)
@@ -69,6 +85,13 @@ public static class UserSectionConfigs
             r.HasData(RoleSeedList);
 
             r.HasQueryFilter(p => !p.IsDeleted);
+        });
+
+        modelBuilder.Entity<UserRole>(ur =>
+        {
+            ur.HasData(UserRoleSeedList);
+
+            ur.HasQueryFilter(p => !p.Role.IsDeleted && !p.User.IsDeleted);
         });
     }
 }
