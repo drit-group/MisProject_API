@@ -2,6 +2,13 @@
 
 public class User
 {
+    public User()
+    {
+        RegisterTime = DateTime.Now;
+        ActiveCode = NameGenerator.GenerateUniqueCode();
+        IdentityCode = NameGenerator.GenerateUniqueCode();
+    }
+
     [Key] public int UserId { get; set; }
 
     #region UserName
