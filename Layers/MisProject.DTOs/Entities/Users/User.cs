@@ -91,7 +91,7 @@ public class User
     [Required, MinLength(3), MaxLength(30)]
     public string LastName { get; set; } = null!;
 
-    [Required, MinLength(3), MaxLength(30)]
+    [MinLength(3), MaxLength(30)]
     public string? FatherName { get; set; } = null!;
     
     [MinLength(3), MaxLength(10), RegularExpression(@"[0-9]{10}")]
