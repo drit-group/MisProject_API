@@ -27,6 +27,13 @@ public class RoleRepository : IRoleRepository
         return await _db.SaveChangesAsync() > 0;
     }
 
+    [Obsolete("WARNING: This method will fully delete row!")]
+    public async Task<bool> Delete(int id)
+    {
+        var role = await GetById(id);
+        return role != null && await Delete(role);
+    }
+
     public async Task<Role?> Update(Role obj)
     {
         var updatedResult = _db.Roles.Update(obj);

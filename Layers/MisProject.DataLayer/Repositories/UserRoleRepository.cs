@@ -22,8 +22,21 @@ public class UserRoleRepository : IUserRoleRepository
 
     public async Task<bool> Delete(UserRole obj)
     {
-        _db.UserRoles.Remove(obj);
-        return await _db.SaveChangesAsync() > 0;
+        try
+        {
+            _db.UserRoles.Remove(obj);
+            return await _db.SaveChangesAsync() > 0;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    public async Task<bool> Delete(int id)
+    {
+        var item = await GetById(id);
+        return item != null && await Delete(item);
     }
 
     public async Task<UserRole?> Update(UserRole obj)

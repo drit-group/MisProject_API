@@ -27,6 +27,13 @@ public class UserRepository : IUserRepository
         return await _db.SaveChangesAsync() > 0;
     }
 
+    [Obsolete("WARNING: This method will fully delete row!")]
+    public async Task<bool> Delete(int id)
+    {
+        var user = await GetById(id);
+        return user != null && await Delete(user);
+    }
+
     public async Task<User?> Update(User obj)
     {
         var updatedResult = _db.Users.Update(obj);
