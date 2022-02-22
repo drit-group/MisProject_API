@@ -36,7 +36,7 @@ public class UserRepositoryTests
     public async Task Create_ShouldReturnCreatedUser()
     {
         // Arrange
-        var fixture = new UserFixture();
+        var fixture = new CustomFixture();
         var user = fixture.Create<User>();
 
         // Act
@@ -66,7 +66,7 @@ public class UserRepositoryTests
     public async Task GetById_ShouldReturnExistingUser()
     {
         // Arrange
-        var fixture = new UserFixture();
+        var fixture = new CustomFixture();
         var user = fixture.Create<User>();
         await _repository.Create(user);
 
@@ -85,7 +85,7 @@ public class UserRepositoryTests
     public async Task Update_ShouldReturnUpdatedUser()
     {
         // Arrange
-        var fixture = new UserFixture();
+        var fixture = new CustomFixture();
         var user = fixture.Create<User>();
         await _repository.Create(user);
 
@@ -105,7 +105,7 @@ public class UserRepositoryTests
     public async Task DeleteById_ShouldReturnTrue()
     {
         // Arrange
-        var fixture = new UserFixture();
+        var fixture = new CustomFixture();
         var user = fixture.Create<User>();
         await _repository.Create(user);
 
@@ -119,7 +119,7 @@ public class UserRepositoryTests
     public async Task Delete_ShouldReturnTrue()
     {
         // Arrange
-        var fixture = new UserFixture();
+        var fixture = new CustomFixture();
         var user = fixture.Create<User>();
         await _repository.Create(user);
 

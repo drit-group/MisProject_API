@@ -2,9 +2,9 @@
 
 namespace MisProject.DataLayer.Tests;
 
-public class UserFixture : Fixture
+public class CustomFixture : Fixture
 {
-    public UserFixture()
+    public CustomFixture()
     {
         this.Register(() => new User()
         {
@@ -20,6 +20,12 @@ public class UserFixture : Fixture
             ActiveCode = "4774d6cf92a744f9b181609003b31e7d",
             IdentityCode = "045f5b119de54909ab6630eae9a0b532",
             RegisterTime = DateTime.Now
+        });
+
+        this.Register(() => new Role
+        {
+            IsDeleted = false,
+            RoleName = "Test Role",
         });
     }
 }
