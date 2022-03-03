@@ -11,27 +11,9 @@ public class User
 
     [Key] public int UserId { get; set; }
 
-    #region UserName
 
-    private string _userName = null!;
-    [Required, MinLength(5), MaxLength(20), RegularExpression("^[a-zA-Z][a-zA-Z0-9_]{4,19}$")]
-    public string UserName
-    {
-        get => _userName;
-        set => _userName = FixedUserName = value;
-    }
-
-
-    private string _fixedUserName = null!;
-    [Required, MaxLength(20)]
-    public string FixedUserName
-    {
-        get => _fixedUserName;
-        private set => _fixedUserName = value.ToFixedText();
-    }
-
-    #endregion
-
+    [MinLength(3), MaxLength(10), RegularExpression(@"[0-9]{10}"), Required]
+    public string NationalCode { get; set; }
 
     #region Email
 
@@ -93,9 +75,6 @@ public class User
 
     [MinLength(3), MaxLength(30)]
     public string? FatherName { get; set; } = null!;
-    
-    [MinLength(3), MaxLength(10), RegularExpression(@"[0-9]{10}")]
-    public string? NationalCode { get; set; }
 
     [DataType(DataType.Date)]
     public DateTime? BirthDay { get; set; }

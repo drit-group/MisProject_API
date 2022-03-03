@@ -8,7 +8,7 @@ public class CustomFixture : Fixture
     {
         this.Register(() => new User()
         {
-            UserName = "TestUser",
+            NationalCode = "1080000100",
             // Get password from Mis.Password, otherwise set to AdminAdmin (Hash salt: MySalt)
             Password = Environment.GetEnvironmentVariable("Mis.Password") ?? "045e9902f2aca62f48117c43dfbd18cb",
             Email = "TestUser@Users.com",

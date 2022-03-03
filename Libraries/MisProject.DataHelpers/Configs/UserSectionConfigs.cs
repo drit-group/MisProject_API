@@ -17,7 +17,7 @@ public static class UserSectionConfigs
         new User()
         {
             UserId = 1,
-            UserName = "Admin",
+            NationalCode = "1080000001",
             // Get password from Mis.Password, otherwise set to AdminAdmin (Hash salt: MySalt)
             Password = Environment.GetEnvironmentVariable("Mis.Password") ?? "045e9902f2aca62f48117c43dfbd18cb",
             Email = "Admin@Admin.com",
@@ -33,7 +33,7 @@ public static class UserSectionConfigs
         new User()
         {
             UserId = 2,
-            UserName = "User 2",
+            NationalCode = "1080000002",
             // Password=password (salt MySalt)
             Password = "471e5243d0db300de1019fed26d3ffb1",
             Email = "User2@Users.com",
@@ -49,7 +49,7 @@ public static class UserSectionConfigs
         new User()
         {
             UserId = 3,
-            UserName = "User 3",
+            NationalCode = "1080000003",
             // Password=password (salt MySalt)
             Password = "471e5243d0db300de1019fed26d3ffb1",
             Email = "User3@Users.com",
